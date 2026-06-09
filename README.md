@@ -1,62 +1,41 @@
-# 🔐 PHP Authentication System
+# 🔐 PHP Premium Authentication System
 
-A secure and lightweight authentication system built using PHP & MySQL.  
-Designed as a beginner-friendly project and a base structure for real-world web applications like admin panels, dashboards, and business systems.
+![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-blue)
+![MySQL](https://img.shields.io/badge/MySQL-5.7%2B-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+![UI](https://img.shields.io/badge/UI-Glassmorphism-purple)
 
----
+A complete, secure, and modern authentication system built with **PHP** and **MySQL**.  
+Features **login**, **registration**, **forgot password**, **email‑based password reset**, and a **premium dashboard** with a beautiful glassmorphic UI.
 
-## 🚀 Overview
-
-This project demonstrates a complete user authentication flow including:
-
-- User registration
-- Secure login system
-- Session management
-- Password encryption
-- Logout functionality
-
-It follows basic security practices and clean coding structure for better understanding of backend development.
+Perfect for admin panels, membership sites, or as a foundation for larger web applications.
 
 ---
 
 ## ✨ Features
 
-- User Registration System
-- Secure Login System
-- Password Hashing using `password_hash()`
-- Session-based Authentication
-- Logout Functionality
-- Basic Input Validation
-- SQL Injection Protection (Prepared Statements)
+- ✅ **User Registration** – with validation and duplicate email check  
+- ✅ **Secure Login** – password hashing (bcrypt) + session management  
+- ✅ **Forgot Password** – generates a secure token, sends reset link via email  
+- ✅ **Password Reset** – token expires in 1 hour, one‑time use  
+- ✅ **Protected Dashboard** – accessible only after login (`index.php`)  
+- ✅ **Logout** – destroys session  
+- ✅ **Premium Glassmorphism UI** – gradients, shadows, smooth animations  
+- ✅ **SQL Injection Protection** – all queries use prepared statements  
+- ✅ **XSS Protection** – output escaped with `htmlspecialchars`
 
 ---
 
 ## 🛠️ Tech Stack
 
-- PHP (Core PHP)
-- MySQL Database
-- HTML5
-- CSS3
-- Bootstrap (optional)
+| Layer       | Technology                          |
+|-------------|-------------------------------------|
+| Backend     | PHP (Core, no frameworks)           |
+| Database    | MySQL                               |
+| Frontend    | HTML5, CSS3 (custom glassmorphic)   |
+| Fonts       | Google Fonts (Poppins)              |
+| Auth        | Sessions, `password_hash()` / `password_verify()` |
 
 ---
 
 ## 📁 Project Structure
-
-```text
-php-auth-system/
-│
-├── index.php
-├── login.php
-├── register.php
-├── logout.php
-├── dashboard.php
-│
-├── config/
-│   └── db.php
-│
-├── assets/
-│   ├── css/
-│   └── js/
-│
-└── README.md
