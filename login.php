@@ -1,7 +1,6 @@
 <?php
 require_once 'config/db.php';
 
-// Redirect if already logged in
 if (isset($_SESSION['user_id'])) {
     header('Location: index.php');
     exit;
@@ -37,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Premium App</title>
+    <title>Login | WebzAPI Elite Web Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -53,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="POST">
             <div class="input-group">
                 <label>Email Address</label>
-                <input type="email" name="email" required value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>">
+                <input type="email" name="email" required>
             </div>
             <div class="input-group">
                 <label>Password</label>
@@ -64,6 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="links">
             <a href="forgot.php">Forgot Password?</a>
             <a href="register.php">Create Account</a>
+        </div>
+        <div class="footer" style="text-align: center; margin-top: 30px; font-size: 12px; color: #888;">
+            &copy; <?php echo date('Y'); ?> WebzAPI-Elite Web Studio | <a href="https://WebzAPI.com" target="_blank" style="color: #764ba2;">WebzAPI.com</a>
         </div>
     </div>
 </body>
