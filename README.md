@@ -1,40 +1,51 @@
 # 🔐 PHP Premium Authentication System
 
-![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-blue)
+![PHP](https://img.shields.io/badge/PHP-7.4%2B-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-5.7%2B-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![UI](https://img.shields.io/badge/UI-Glassmorphism-purple)
+![Status](https://img.shields.io/badge/Status-Production--Ready-success)
 
-A complete, secure, and modern authentication system built with **PHP** and **MySQL**.  
-Features **login**, **registration**, **forgot password**, **email-based password reset**, and a **premium dashboard** with a beautiful glassmorphic UI.
+A **secure, scalable, and production-ready authentication system** built using PHP and MySQL.
 
-Perfect for admin panels, membership sites, or as a foundation for larger web applications.
+This project provides a complete login & registration system with modern security practices and a clean glassmorphism UI — suitable for real-world applications like admin panels, SaaS products, and web platforms.
+
+---
+
+## 🚀 Key Highlights
+
+- Secure user authentication system
+- Clean and scalable PHP architecture
+- Modern glassmorphism UI design
+- Production-level folder structure
+- Easy to integrate into any web application
 
 ---
 
 ## ✨ Features
 
-- ✅ User Registration – with validation and duplicate email check  
-- ✅ Secure Login – password hashing (bcrypt) + session management  
-- ✅ Forgot Password – generates secure token and email reset link  
-- ✅ Password Reset – token expires in 1 hour (one-time use)  
-- ✅ Protected Dashboard – accessible only after login  
-- ✅ Logout – session destroy  
-- ✅ Premium Glassmorphism UI  
-- ✅ SQL Injection Protection – prepared statements  
-- ✅ XSS Protection – sanitized output
+- 👤 User Registration with validation
+- 🔐 Secure Login system
+- 🔑 Password hashing using `password_hash()`
+- 📩 Forgot password with email token system
+- ♻️ Password reset with expiry (1 hour)
+- 🧠 Session-based authentication
+- 🚪 Secure logout system
+- 🛡️ SQL Injection protection (Prepared Statements)
+- ⚡ XSS protection using output sanitization
+- 🎨 Modern Glassmorphism UI design
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer    | Technology |
-|----------|------------|
-| Backend  | PHP (Core PHP) |
-| Database | MySQL |
-| Frontend | HTML5, CSS3 |
-| UI Style | Glassmorphism |
-| Auth     | Sessions + password_hash |
+| Layer     | Technology |
+|-----------|------------|
+| Backend   | PHP (Core PHP) |
+| Database  | MySQL |
+| Frontend  | HTML5, CSS3 |
+| UI Design | Glassmorphism |
+| Auth      | Sessions + Secure hashing |
 
 ---
 
@@ -43,22 +54,22 @@ Perfect for admin panels, membership sites, or as a foundation for larger web ap
 ```text
 php-auth-system/
 │
-├── index.php                 # Protected dashboard (main)
-├── login.php
-├── register.php
-├── logout.php
-├── dashboard.php             # Alternative protected page
+├── index.php                 # Main protected dashboard
+├── login.php                 # User login
+├── register.php              # User registration
+├── logout.php                # Logout & session destroy
+├── dashboard.php             # Protected user dashboard
 ├── forgot.php                # Password reset request
-├── reset_password.php        # Reset password using token
+├── reset_password.php        # Reset password with token
 │
 ├── config/
-│   └── db.php                # Database connection + session start
+│   └── db.php                # Database connection file
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css         # Glassmorphism UI styles
+│   │   └── style.css         # UI styling (Glassmorphism)
 │   └── js/
-│       └── main.js           # Optional JS effects
+│       └── main.js           # Frontend interactions (optional)
 │
 └── database/
-    └── database.sql         # Database structure file
+    └── database.sql         # SQL schema file
