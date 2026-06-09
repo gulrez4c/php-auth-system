@@ -1,13 +1,11 @@
 <?php
 require_once 'config/db.php';
 
-// Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
 
-// Get user data
 $stmt = $pdo->prepare("SELECT name, email, created_at FROM users WHERE id = ?");
 $stmt->execute([$_SESSION['user_id']]);
 $user = $stmt->fetch();
@@ -17,7 +15,7 @@ $user = $stmt->fetch();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Premium App</title>
+    <title>Dashboard | WebzAPI Elite Web Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -40,8 +38,14 @@ $user = $stmt->fetch();
         </div>
         
         <div class="premium-card">
-            <h3>Getting Started</h3>
-            <p>Explore your premium dashboard and enjoy the benefits!</p>
+            <h3>Powered by</h3>
+            <p><strong>WebzAPI-Elite Web Studio</strong> | Developed by Gulrez Siddiqui</p>
+            <p><a href="https://WebzAPI.com" target="_blank">WebzAPI.com</a></p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer" style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; font-size: 12px; color: #888;">
+            &copy; <?php echo date('Y'); ?> WebzAPI-Elite Web Studio. All rights reserved. | Crafted with ❤️ by Gulrez Siddiqui
         </div>
     </div>
 </body>
