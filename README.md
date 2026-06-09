@@ -39,3 +39,24 @@ Perfect for admin panels, membership sites, or as a foundation for larger web ap
 ---
 
 ## 📁 Project Structure
+
+php-auth-system/
+│
+├── index.php                 # Protected dashboard (main)
+├── login.php
+├── register.php
+├── logout.php
+├── dashboard.php             # Alternative protected page
+├── forgot.php                # Requests password reset
+├── reset_password.php        # Resets password using token
+│
+├── config/
+│   └── db.php                # Database connection + session start
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css         # Premium glassmorphic styles
+│   └── js/
+│       └── main.js           # (optional) smooth fade-in effects
+│
+└── README.md
