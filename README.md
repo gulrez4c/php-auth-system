@@ -6,7 +6,7 @@
 ![UI](https://img.shields.io/badge/UI-Glassmorphism-purple)
 
 A complete, secure, and modern authentication system built with **PHP** and **MySQL**.  
-Features **login**, **registration**, **forgot password**, **email‑based password reset**, and a **premium dashboard** with a beautiful glassmorphic UI.
+Features **login**, **registration**, **forgot password**, **email-based password reset**, and a **premium dashboard** with a beautiful glassmorphic UI.
 
 Perfect for admin panels, membership sites, or as a foundation for larger web applications.
 
@@ -14,32 +14,33 @@ Perfect for admin panels, membership sites, or as a foundation for larger web ap
 
 ## ✨ Features
 
-- ✅ **User Registration** – with validation and duplicate email check  
-- ✅ **Secure Login** – password hashing (bcrypt) + session management  
-- ✅ **Forgot Password** – generates a secure token, sends reset link via email  
-- ✅ **Password Reset** – token expires in 1 hour, one‑time use  
-- ✅ **Protected Dashboard** – accessible only after login (`index.php`)  
-- ✅ **Logout** – destroys session  
-- ✅ **Premium Glassmorphism UI** – gradients, shadows, smooth animations  
-- ✅ **SQL Injection Protection** – all queries use prepared statements  
-- ✅ **XSS Protection** – output escaped with `htmlspecialchars`
+- ✅ User Registration – with validation and duplicate email check  
+- ✅ Secure Login – password hashing (bcrypt) + session management  
+- ✅ Forgot Password – generates secure token and email reset link  
+- ✅ Password Reset – token expires in 1 hour (one-time use)  
+- ✅ Protected Dashboard – accessible only after login  
+- ✅ Logout – session destroy  
+- ✅ Premium Glassmorphism UI  
+- ✅ SQL Injection Protection – prepared statements  
+- ✅ XSS Protection – sanitized output
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer       | Technology                          |
-|-------------|-------------------------------------|
-| Backend     | PHP (Core, no frameworks)           |
-| Database    | MySQL                               |
-| Frontend    | HTML5, CSS3 (custom glassmorphic)   |
-| Fonts       | Google Fonts (Poppins)              |
-| Auth        | Sessions, `password_hash()` / `password_verify()` |
+| Layer    | Technology |
+|----------|------------|
+| Backend  | PHP (Core PHP) |
+| Database | MySQL |
+| Frontend | HTML5, CSS3 |
+| UI Style | Glassmorphism |
+| Auth     | Sessions + password_hash |
 
 ---
 
 ## 📁 Project Structure
 
+```text
 php-auth-system/
 │
 ├── index.php                 # Protected dashboard (main)
@@ -47,16 +48,17 @@ php-auth-system/
 ├── register.php
 ├── logout.php
 ├── dashboard.php             # Alternative protected page
-├── forgot.php                # Requests password reset
-├── reset_password.php        # Resets password using token
+├── forgot.php                # Password reset request
+├── reset_password.php        # Reset password using token
 │
 ├── config/
 │   └── db.php                # Database connection + session start
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css         # Premium glassmorphic styles
+│   │   └── style.css         # Glassmorphism UI styles
 │   └── js/
-│       └── main.js           # (optional) smooth fade-in effects
+│       └── main.js           # Optional JS effects
 │
-└── README.md
+└── database/
+    └── database.sql         # Database structure file
