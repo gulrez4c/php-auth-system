@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($password !== $confirm_password) {
         $error = 'Passwords do not match';
     } else {
-        // Check if email exists
         $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->execute([$email]);
         if ($stmt->fetch()) {
@@ -41,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Premium App</title>
+    <title>Register | WebzAPI Elite Web Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -79,6 +78,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
         <div class="links">
             <a href="login.php">Already have an account? Login</a>
+        </div>
+        <div class="footer" style="text-align: center; margin-top: 30px; font-size: 12px; color: #888;">
+            &copy; <?php echo date('Y'); ?> WebzAPI-Elite Web Studio | Developed by Gulrez Siddiqui
         </div>
     </div>
 </body>
